@@ -24,37 +24,6 @@ window.onclick = function(event) {
     }
 }
 
-// Función para agregar/quitar favoritos
-function toggleFavorite(productName) {
-    let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
-    const index = favorites.indexOf(productName);
-
-    if (index === -1) {
-        favorites.push(productName);
-    } else {
-        favorites.splice(index, 1);
-    }
-
-    localStorage.setItem('favorites', JSON.stringify(favorites));
-    updateHeartButton(productName);
-}
-
-// Función para actualizar el estado del botón del corazón
-function updateHeartButton(productName) {
-    let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
-    const heartButton = document.querySelector('.heart-button');
-
-    if (favorites.includes(productName)) {
-        heartButton.classList.add('active');
-    } else {
-        heartButton.classList.remove('active');
-    }
-}
-
-// Actualiza el estado del botón del corazón al cargar la página
-document.addEventListener('DOMContentLoaded', function() {
-    updateHeartButton('Nombre del Producto');
-});
 
 
 
