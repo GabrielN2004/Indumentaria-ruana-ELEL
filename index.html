@@ -46,7 +46,7 @@
                 <div class="banner-text">
                     <h1>Bienvenido a Nuestra Tienda</h1>
                     <p>Descubre las últimas tendencias en moda</p>
-                    <button class="detail-button">Ver Productos</button>
+                    <button class="detail-button" onclick="location.href='/template/html/products.html';">Ver Productos</button>
                 </div>
             </section>
             
@@ -61,7 +61,7 @@
                             <p>Descripción breve del producto 1.</p>
                             <h4>Precio: $50.00</h4>
                             <div class="buttons">
-                                <button class="detail-button">Ver más detalles</button>
+                                <button class="detail-button" id="modal-1">Ver más detalles</button>
                                 <button class="heart-button"><i class="fas fa-heart"></i></button>
                                 <button class="cart-button"><i class="fas fa-shopping-cart"></i></button>
                             </div>
@@ -86,7 +86,7 @@
             
             <!-- Sección Galería -->
             <section class="gallery">
-                <h2>Galería</h2>
+                <h2>Moda Otoño 2024</h2>
                 <div class="gallery-images">
                     <img src="/static/img/modelo-1.jpg" alt="Galería 1">
                     <img src="/static/img/modelo-2.png" alt="Galería 2">
@@ -103,11 +103,25 @@
                     <img src="/static/img/logo.jpg" alt="Logo Empresa">
                     <div class="about-info">
                         <p>Somos una empresa dedicada a ofrecer la mejor calidad en ropa de moda. Nuestro objetivo es brindar a nuestros clientes productos únicos y de alta calidad.</p>
-                        <button class="read-more-button">Leer más</button>
+                        <button class="read-more-button" onclick="location.href='/template/html/about-us.html'">Leer más</button>
                     </div>
                 </div>
             </section>
-        </div>    
+        </div>
+        <!--Ventanas Modals de detalles de los productos -->
+        <div id="product-modal" class="modal-product">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <img src="/static/img/ruana-2.png" alt="">
+                <h3>Producto 1</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis totam ea blanditiis dolore cum reprehenderit.</p>
+                <div class="buttons">
+                    <button class="heart-button"><i class="fas fa-heart"></i></button>
+                    <button class="cart-button"><i class="fas fa-shopping-cart"></i></button>
+                </div>
+            </div>            
+        </div>
+        <script src="/template/javascript/index.js"></script>
     </main>
     <footer class="footer">
         <div class="footer-container">
